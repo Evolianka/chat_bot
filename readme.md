@@ -28,7 +28,7 @@
 
 ```bash 
 cd ./app
-cp .env.local.example .env.local
+cp .env.local.example .env
 ```
 
 Заполните `.env.local` файл своими значениями.
