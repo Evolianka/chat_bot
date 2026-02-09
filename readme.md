@@ -1,8 +1,8 @@
-# Агент №0 [[amor_fatum]](https://t.me/amor_fatum) :)
+# Агент №1 [[amor_fati_garden]](https://t.me/amor_fati_garden) :)
 
 ## Описание
 
-Позывной: [amor_fatum_bot](https://t.me/amor_fatum_bot)
+Позывной: [amor_fati_garden_bot](https://t.me/amor_fati_garden_bot)
 
 Функционал:
 - Анонимный постинг комментов под постами
@@ -37,35 +37,6 @@ cp .env.local.example .env.local
 
 ```bash
 docker-compose up -d
-```
-
-Выполнить команду инициализации Vault:
-
-```bash
-docker compose exec vault sh -lc '
-  export VAULT_ADDR=http://127.0.0.1:8200 
-  vault operator init -key-shares=1 -key-threshold=1
-'
-````
-
-Vault сгенерирует unseal и root token. Сохраните их и подставьте в энвы в docker-compose.yml.
-
-Выполните команду unseal:
-
-```bash
-docker compose exec vault sh -lc '
-  export VAULT_ADDR=http://127.0.0.1:8200 
-  vault operator unseal <UNSEAL_KEY>
-'
-```
-
-Для доступа к Vault выполните команду, если нужна дополнительная конфигурация:
-
-```bash
-docker compose exec vault sh -lc '
-  export VAULT_ADDR=http://127.0.0.1:8200
-  vault login <ROOT_TOKEN>
-'
 ```
 
 ### Запуск проекта:
